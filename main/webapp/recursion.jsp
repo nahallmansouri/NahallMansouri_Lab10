@@ -176,8 +176,12 @@
 	 */
 	public int treeSum(Tree tree) 
 	{
-		for(int test: tree.getValue())
-		return 0;
+		int total = 0;
+		for(Tree kid: tree.getChildren())
+		{
+			total += treeSum(kid);
+		}
+		return total;
 	}
 
 	/**
