@@ -8,7 +8,7 @@
 <body style="BACKGROUND: url(images/bcgreeen1.GIF) repeat-x" height=938>
 	<%!/**
 	 * Lab 9: Recursion Suite
-	 * 
+	 *  
 	 * This lab tests your ability to implement recursion for several functions.
 	 * 
 	 * @author Stephen
@@ -32,7 +32,7 @@
 		 * This lets our recursion know when to stop.
 		 */
 
-		//TODO
+
 
 		if (value == 1) {
 			return 1;
@@ -46,7 +46,7 @@
 		 * By doing this, we break up the equation n! into n! = n * (n-1)!.
 		 */
 
-		//TODO
+
 		return value * factorial(value - 1);
 
 	}
@@ -67,9 +67,9 @@
 	 * compute the 1st fibonacci number.
 	 * @return The value of the nth fibonacci number.
 	 */
-	public int fibonacci(int n) {
+	public int fibonacci(int n) 
+	 {
 
-		//TODO
 		if (n == 0)
 		{
 			return 0;
@@ -113,7 +113,6 @@
 
 		public Tree(int value)
 		{
-			//TODO
 			this.value = value;
 			children = new ArrayList <Tree>();
 		}
@@ -176,7 +175,7 @@
 	 */
 	public int treeSum(Tree tree) 
 	{
-		int total = 0;
+		int total = tree.getValue();
 		for(Tree kid: tree.getChildren())
 		{
 			total += treeSum(kid);
