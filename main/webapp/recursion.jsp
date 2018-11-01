@@ -114,14 +114,8 @@
 		public Tree(int value)
 		{
 			//TODO
-			Tree root = new Tree(5);
-
-			Tree child1 = new Tree(7);
-			Tree child2 = new Tree(8);
-
-			root.add(child1);
-			root.add(child2);
-
+			this.value = value;
+			children = new ArrayList <Tree>();
 		}
 
 		public int getValue() 
@@ -162,12 +156,14 @@
 	 * @param height The height of the subtree. When the height == 1, the subtree has no more children.
 	 * @return The size of the subtree - the number of nodes.
 	 */
-	public int nnaryTreeSize(int branchingFactor, int height) {
-		if (height == 1) {
-			//TODO
+	public int nnaryTreeSize(int branchingFactor, int height) 
+	{
+		if (height == 1) 
+		{
+			
+			return 1;
 		}
-		//TODO
-		return 0;
+		return 1 + branchingFactor * nnaryTreeSize(branchingFactor, height -1);
 	}
 
 	/**
@@ -178,8 +174,9 @@
 	 * @param tree The subtree to sum over.
 	 * @return The sum of the values in the subtree.
 	 */
-	public int treeSum(Tree tree) {
-		//TODO
+	public int treeSum(Tree tree) 
+	{
+		for(int test: tree.getValue())
 		return 0;
 	}
 
